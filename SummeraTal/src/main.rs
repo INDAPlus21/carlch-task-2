@@ -26,7 +26,7 @@ fn main() {
         .next()
         .unwrap()
         .split_whitespace()
-        .map(|number| number
+        .map(|_number| _number
             .parse::<usize>()
             .unwrap())
         .collect::<Vec<usize>>();
@@ -47,13 +47,11 @@ fn main() {
     // Add the largest half of all numbers 
     let mut sum = 0;
 
-        for _number in 0..number_count {
-            if _number >= a_sum {
-                sum += numbers[_number];            
-            } else {
-                sum += 0;
-            }
-        };
+    for _index in 0..number_count {
+        if _index >= a_sum {
+            sum += numbers[_index];            
+        }
+    };
 
     // Print out the sum
     println!("{}", sum);
